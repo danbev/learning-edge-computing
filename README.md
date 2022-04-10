@@ -3,8 +3,19 @@ Projects to gather notes and examples around edge computing.
 
 ### Edge computing background
 Over the recent years more and more IoT devices have been deployed and these
-devices are creating more an more data that we want to use in some way. Since
-most IoT devices are need are resource constrained, like the might not have
+devices are creating more an more data that we want to use in some way. What is
+currently most often the case is that these IoT devices are connected to
+some sort of gateway what will route the data to a cloud service for handling
+(analysis, processing, storing etc.). The number of deployed devices is
+increasing every day and more and more data needs to be handled, and this is
+going to cause issues with bandwidth. There are also more devices that require
+lower latency from its services. For example, self driving cars might not have
+time to wait for cloud service responses, and another example is servailance
+cameras that generate huge amounts of data. These are some of the driving
+forces, to moving networked computing resources closer to where the data is
+created.
+
+Since most IoT devices are resource constrained, like they might not have
 powerful processors, or be limit to battery power and therefor need to do as
 little processing as possible. Now, these devices "can't" really send this
 information directly to a cloud but instead will send small amounts of data
@@ -52,11 +63,11 @@ Edge computing:
                                                           +-------------------+
                                                           |                   |
                                                           |                   |
-                     +-------+                            |                   |
-   +----------+      |Edge   |                            |   Cloud Services  |
-   |IoT Device|<---->|server |<-------------------------->|                   |
-   +----------+  +-->|       |                            |                   |
-   +----------+  |   +-------+                            |                   |
+                     +--------+                           |                   |
+   +----------+      |Edge    |                           |   Cloud Services  |
+   |IoT Device|<---->|compute |<------------------------->|                   |
+   +----------+  +-->|resource|                           |                   |
+   +----------+  |   +--------+                           |                   |
    |IoT Device|<-+                                        |                   |
    +----------+                                           +-------------------+
 ```
@@ -65,6 +76,13 @@ data is being generated. So it receives data from IoT devices like sensors and
 can store, process, or send the data to the cloud (or all three I guess). But
 data does not need to be sent to the cloud and might be processed by the edge
 server itself.
+
+I initialy though of the edge compute resource as a normal server in a rack
+for example but these can be small dedicated devices (small single board
+computers) like a [lattepanda](https://www.lattepanda.com/) or a
+[udoo bolt](https://www.udoo.org/discover-the-udoo-bolt/), or a
+[Khadas Edge V](https://www.khadas.com/edge), or a
+[Jetson Nano](https://developer.nvidia.com/embedded-computing).
 
 
 Now, an extension of the Edge server is to have a mini cloud of sort that has
@@ -77,11 +95,11 @@ Fog computing:
                                                           +-------------------+
                                                           |                   |
                                                           |                   |
-                     +-------+        +--------+          |                   |
-   +----------+      |Edge   |        |  Fog   |          |   Cloud Services  |
-   |IoT Device|<---->|server |<-------| layer  |--------->|                   |
-   +----------+  +-->|       |        |        |          |                   |
-   +----------+  |   +-------+        +--------+          |                   |
+                     +--------+        +--------+         |                   |
+   +----------+      |Edge    |        |  Fog   |         |   Cloud Services  |
+   |IoT Device|<---->|compute |<-------| layer  |-------->|                   |
+   +----------+  +-->|resource|        |        |         |                   |
+   +----------+  |   +--------+        +--------+         |                   |
    |IoT Device|<-+                                        |                   |
    +----------+                                           +-------------------+
 ```
