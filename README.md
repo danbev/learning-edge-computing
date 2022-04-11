@@ -85,11 +85,11 @@ computers) like a [lattepanda](https://www.lattepanda.com/) or a
 [Jetson Nano](https://developer.nvidia.com/embedded-computing).
 
 
-Now, an extension of the Edge server is to have a mini cloud of sort that has
-some of the same features of a cloud, like scalability for example. This is
-a layer between the edge server (or parhaps even replaces the edge server, this
-is not clear to me yet). What are these things called, well they are called Fog
-(as in cloud but closer to the ground or something like that I guess):
+Now, an extension of the Edge compute resource is to have a mini cloud of sort
+that has some of the same features of a cloud, like scalability for example.
+This is a layer between the edge server (or parhaps even replaces the edge
+server, this is not clear to me yet). What are these things called, well they
+are called Fog (as in cloud but closer to the ground or something like that):
 ```
 Fog computing:
                                                           +-------------------+
@@ -105,12 +105,12 @@ Fog computing:
 ```
 This idea called Fog computing was coined by Cisco in 2014 and later in 2015
 IBM coided the term Edge computing.
+
 The Fog layer receives data from the edge layer and can futher filter it down or
 can act on the data with or without sending it through to the cloud services.
 This allows for saving on bandwidth and also latency.
 
 [OpenFog](https://opcfoundation.org/markets-collaboration/openfog/)
-
 
 ```
 Fog layer:
@@ -124,3 +124,18 @@ Networking: TCP/UDP IP, Http/ CoAP, XMPP/MQTT/AMQP, 802.15.4 (ZigBee), Z-Wave, B
 Control: Deployment, Actuation, Mediation, Security
 Storage: Caching
 ```
+
+### Multi-access Edge Computing (MEC)
+In the examples shown previously we assumed that the IoT devices were in a fixed
+location and hence we knew were to place the edge computing resources. But for
+cases where the IoT devices can move we will know longer know where to place
+the edge computing resources. Multi-access Edge Computing addresses this issue
+by placing the edge computing resources on the Telco network itself.  
+Telephone companies (Telco) provider telecommunication servcies and have
+existing infrastructure but most are not data centers, at least not yet. But
+this is changing and these are being converted/updated to be mini data centers
+with servers and cloud native NFV applications.
+
+
+
+This the above
