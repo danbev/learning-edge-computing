@@ -77,8 +77,8 @@ can store, process, or send the data to the cloud (or all three I guess). But
 data does not need to be sent to the cloud and might be processed by the edge
 server itself.
 
-I initialy though of the edge compute resource as a normal server in a rack
-for example but these can be small dedicated devices (small single board
+I initialy thought of the edge compute resources as a normal server in a rack
+for example, but these can be small dedicated devices (small single board
 computers) like a [lattepanda](https://www.lattepanda.com/) or a
 [udoo bolt](https://www.udoo.org/discover-the-udoo-bolt/), or a
 [Khadas Edge V](https://www.khadas.com/edge), or a
@@ -130,12 +130,24 @@ In the examples shown previously we assumed that the IoT devices were in a fixed
 location and hence we knew were to place the edge computing resources. But for
 cases where the IoT devices can move we will know longer know where to place
 the edge computing resources. Multi-access Edge Computing addresses this issue
-by placing the edge computing resources on the Telco network itself.  
-Telephone companies (Telco) provider telecommunication servcies and have
+by placing the edge computing resources at the egde of the cellular network.
+This could be at the cellular base station
+
+Telephone companies (Telco) provide telecommunication services and have
 existing infrastructure but most are not data centers, at least not yet. But
 this is changing and these are being converted/updated to be mini data centers
 with servers and cloud native NFV applications.
 
+Now, to avoid vendor lock-in and having specific solutions for each telco
+provider a framework like Kubernetes is useful.
+
+#### K3S
+Provides the full power of Kubernetes but is more light weight but still around
+50MB binary, built for ARM.
+
+[K3S](https://k3s.io/)
 
 
-This the above
+#### KubeEdge
+TODO:
+[KubeEdge](https://kubeedge.io/en/)
