@@ -11,10 +11,10 @@ some sort of gateway what will route the data to a cloud service for processing
 The number of deployed devices is increasing every day and more and more data
 needs to be handled, and this is going to cause issues with bandwidth. There are
 also more devices that require lower latency from its services. For example,
-self driving cars might not have time to wait for cloud service responses, and
-another example is servailance cameras that generate huge amounts of data. These
-are some of the driving forces, to moving networked computing resources closerx
- to where the data is created.
+self driving cars (connected cars) might not have time to wait for cloud service
+responses, and another example is servailance cameras that generate huge amounts
+of data. These are some of the driving forces, to moving networked computing
+resources closer to where the data is created.
 
 Since most IoT devices are resource constrained, like they might not have
 powerful processors, or be limit to battery power and therefor need to do as
@@ -124,19 +124,47 @@ In the examples shown previously we assumed that the IoT devices were in a fixed
 location and hence we knew were to place the edge computing resources. But for
 cases where the IoT devices can move we will know longer know where to place
 the edge computing resources. Multi-access Edge Computing addresses this issue
-by placing the edge computing resources at the edge of the cellular network.
-This could be at the cellular base station or Radio Access Network
-(TODO: this is really not clear to me at the moment and I want to look into this
-further where/how these placed).
+by placing the edge computing resources at the edge of the cellular network in
+the Radio Access Network (RAN) edge. Is the RAN part of the LTE base station?
+
+This provides applications low latency, high bandwidth, and the environment will
+offer cloud computing like capabilities and also realtime radio network
+conditions (allowing to act upon changes in network conditions).
 
 Telephone companies (Telco) provide telecommunication services and have
 existing infrastructure, but most are not data centers, at least not yet. But
 this is changing and these are being converted/updated to be mini data centers
-with servers and cloud native NFV applications.
+with servers and cloud native network functions virtualization (NFV)
+applications.
 
-Now, to avoid vendor lock-in and having specific solutions for each telco
-provider a framework like Kubernetes is useful. There are slimmed version of
-Kubernetes like `K3S` and `KubeEdge` which can be use by these devices.
+Network Functions Virtualization is about taking networking functionality which
+would prevoiusly have been provided by custom hardare appliances and instead
+run these functionalities on commodity hardare, called Commercial Off the Shelf
+COTS. This allows for all the benifits of using virtualization in enterprise
+clouds with management, scaling etc.
+MEC is also based on a virtualized platform much like NFV but instead of
+network functionality it allows applications to be run. It should/could be
+possible to run both on them platform. This is really powerful and one thing
+that stood out to me was the ability to scale up/down on demand, where
+previously when custom hardware was used I guess there had to be enough to
+handle spikes in traffic and othertime this would just be idle.
+
+There is also a tie in with 5G and MEC which I will dig into later.
+
+MEC provides low latency (closer to end users).
+
+Now, to avoid vendor lock-in (Telco provider) and having specific solutions for
+each telco provider a standardized API is need and is what MEC standard provides.
+For deployment a framework like Kubernetes is useful. There are slimmed
+version of Kubernetes like `K3S` and `KubeEdge` which can be use by these
+devices.
+
+I found this [whitepaper](https://www.etsi.org/images/files/ETSIWhitePapers/etsi_wp11_mec_a_key_technology_towards_5g.pdf)
+to be a worth while read and has some good example usecases. It states that
+MEC's can be deployed in LTE base stations (eNodeB).
+
+#### MEC and 5G
+TODO:
 
 #### K3S
 Provides the full power of Kubernetes but is more light weight but still around
@@ -146,5 +174,6 @@ Provides the full power of Kubernetes but is more light weight but still around
 
 
 #### KubeEdge
-TODO:
 [KubeEdge](https://kubeedge.io/en/)
+
+TODO:
