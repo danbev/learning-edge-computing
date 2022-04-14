@@ -111,10 +111,25 @@ An MEC Host contains MEC platform and the virtualization infrastructure.
 CFS Customer Facing Service
 
 ### API
-There are currently 7 API for MEC
+There are currently 7 API for MEC.
 Below GS stands for Group Specification.
 
-#### GS MEC 010-2 Mobil Edge Management
+#### Radio Network Information API
+Spec: [GS MEC 012 Radio Network Information API](https://www.etsi.org/deliver/etsi_gs/MEC/001_099/012/01.01.01_60/gs_MEC012v010101p.pdf)
+This specification introduces an Radio Network Information Service (RNIS)
+which can be used by MEC applications (and the MEC platform) and provides access
+to radio network conditions, information about user equipments (UE) connected
+to radio node(s) associated the MEC host. This information is contained in a
+struture named Radio Network Infomation (RNI). This information can be retreived
+using RESTful interfaces or if there is a need to have frequent updates it is
+able to subscribe to a message broker topic (the spec does not dictate the
+actual protocol to be used).
+There are message formats specified for JSON and for protobuf to be used with
+the specific communication protocols used.
+
+Consumers of RNIS use the RNI API which supports both queries and subscriptions
+over a RESTful API or a message broker.
+
 
 
 ### Application Package
