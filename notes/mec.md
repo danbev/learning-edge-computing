@@ -116,6 +116,7 @@ Below GS stands for Group Specification.
 
 #### Radio Network Information API
 Spec: [GS MEC 012 Radio Network Information API](https://www.etsi.org/deliver/etsi_gs/MEC/001_099/012/01.01.01_60/gs_MEC012v010101p.pdf)
+
 This specification introduces an Radio Network Information Service (RNIS)
 which can be used by MEC applications (and the MEC platform) and provides access
 to radio network conditions, information about user equipments (UE) connected
