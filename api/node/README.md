@@ -5,11 +5,11 @@ provided by MEC and in particular the publish/subscribe model using HTTP(s).
 I can't remember ever implementing a client that uses HTTPS with a pub/sub model
 and was not sure about what it would look like. The idea here is to simulate
 the MEC Radio Network Information (RNI) service, which is done by
-[server.js](./server.js).
+[server.js](./src/server.js).
 
 The server can be started using (after running `npm i`):
 ```console
-$ node server.js
+$ node src/server.js
 Services:
 URL: /rni/v1/subscriptions/cell_changed
 ```
@@ -25,7 +25,7 @@ server will POST to when a cell_changed event happens and is used to notify the
 client of this event.
 
 ```console
-$ node client.js
+$ node src/client.js
 cell_changed notification
 {
   timeStamp: 1650371488901,
@@ -42,7 +42,7 @@ sink/waste too much time. The code has the a HTTP(S) client and HTTP(S) server.
 Perhaps we could offer a module that hides some of this and makes it simpler
 for an end users to handle. 
 ```
-$ node client2.js
+$ node src/client2.js
 Nodeshift MEC init
 cell_changed notification
 {
@@ -53,7 +53,7 @@ cell_changed notification
   tempUeId: { mmec: '1', mtmsi: '1' }
 ```
 So the functionality is the same but there is less code in
-[client2.js](./client2.js). 
+[client2.js](./src/client2.js). 
 
 Just to be clear this code only meant as a suggestion and can obviously be
 improved but I mostly wanted to explore this and get some feedback from others
