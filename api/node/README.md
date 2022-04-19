@@ -53,7 +53,7 @@ cell_changed notification
   tempUeId: { mmec: '1', mtmsi: '1' }
 ```
 So the functionality is the same but there is less code in
-[client2.js](./client.js). 
+[client2.js](./client2.js). 
 
 Just to be clear this code only meant as a suggestion and can obviously be
 improved but I mostly wanted to explore this and get some feedback from others
