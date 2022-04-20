@@ -119,17 +119,3 @@ Control: Deployment, Actuation, Mediation, Security
 Storage: Caching
 ```
 
-#### K3S
-Provides the full power of Kubernetes but is more light weight but still around
-50MB binary, built for ARM.
-
-[K3S](https://k3s.io/)
-
-
-#### KubeEdge
-100% compatible with Kubernetes API, optimized for edge (components and
-runtime).
-
-[KubeEdge](https://kubeedge.io/en/)
-
-TODO:
