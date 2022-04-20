@@ -3,7 +3,7 @@ const fastify = require('fastify')({ logger: false });
 
 let options;
 
-exports.init = async (opts) => {
+async function init(opts) {
   options = opts;
   console.log('Nodeshift MEC init');
   const start = async () => {
@@ -20,7 +20,7 @@ exports.init = async (opts) => {
 
 const subscriptions = new Map();
 
-exports.subscribe_cell_changed = (callback) => {
+function subscribe_cell_changed(callback) {
   subscriptions.set('cell_changed', callback);
   axios.post('http://localhost:3000/rni/v1/subscriptions/cell_changed', {
     callbackReference: `http://127.0.0.1:${options.port}/cell_changed_notification`,
@@ -38,3 +38,11 @@ fastify.post('/cell_changed_notification', async (request, reply) => {
 });
 
 
+module.exports = {
+  mec: {
+    init
+  },
+  rnis: {
+    subscribe_cell_changed
+  }
+};
