@@ -137,7 +137,27 @@ the specific communication protocols used.
 
 Consumers of RNIS use the RNI API which supports both queries and subscriptions
 over a RESTful API or a message broker.
+
+##### Radio Access Bearer information
 ```
+GET {apiRoot}/rni/v1/quieries/rab_info
+```
+
+##### Public Land Mobil Network
+```
+GET {apiRoot}/rni/v1/quieries/plmn_info
+```
+
+##### S1 Bearer Info
+```
+GET {apiRoot}/rni/v1/quieries/s1_bearer_info
+```
+
+##### Subscriptions
+```
+GET {apiRoot}/rni/v1/subscriptions
+GET {apiRoot}/rni/v1/subscriptions/{subscriptionType}
+GET {apiRoot}/rni/v1/subscriptions/{subscriptionType}/{subscriptionId}
 POST {apiRoot}/rni/v1/subscriptions/{subscriptionType}
 
 Subscription Types:
