@@ -107,8 +107,15 @@ deploy them in MEC's the MEC environment will provides a number of
   +-------------+  +-----------------+ ...
 ```
 An MEC Host contains MEC platform and the virtualization infrastructure. 
+The MEC applications can access MEC services, receive traffic rules
 
+```
 CFS Customer Facing Service
+Mp = Reference points regarding the ME platform
+Mm = Reference point for managment services
+Mx = Reference point for external services
+RAB = Radio Access Bearer
+```
 
 ### API
 There are currently 7 API for MEC.
@@ -125,13 +132,42 @@ struture named Radio Network Infomation (RNI). This information can be retreived
 using RESTful interfaces or if there is a need to have frequent updates it is
 able to subscribe to a message broker topic (the spec does not dictate the
 actual protocol to be used).
-There are message formats specified for JSON and for protobuf to be used with
+There are message formats specified for JSON, and for protobuf to be used with
 the specific communication protocols used.
 
 Consumers of RNIS use the RNI API which supports both queries and subscriptions
 over a RESTful API or a message broker.
+```
+POST {apiRoot}/rni/v1/subscriptions/{subscriptionType}
+Types:
+cell_changed
+rab_est
+rab_mod
+rab_rel
+meas_rep_ue
+ta
+ca_reconf
+s1_bearer
+```
+The body of the POST request will contain the data specified in section
+6.3 Data Model.
 
+Reponse: 201 Created
+Body: NotificationSubscription
+```
 
+To fully understand these values and properties in the messages it is helpful
+to learn a little about [LTE](./lte.md).
+
+#### Location API
+Allows getting location information of specific UEs, all UEs accessed through
+the current MEC Host.
+
+#### Bandwitdh Management API
+TODO:
+
+#### UE Identity API
+Allows for UE specific traffic rules in the MEC system
 
 ### Application Package
 Is a bundle of files provided by application provider, on-boarded into mobile
