@@ -143,9 +143,20 @@ over a RESTful API or a message broker.
 GET {apiRoot}/rni/v1/quieries/rab_info
 ```
 
-##### Public Land Mobil Network
+##### Public Land Mobile Network Info
+A PLMN is is a network run a one operator in one country.
+
 ```
 GET {apiRoot}/rni/v1/quieries/plmn_info
+```
+The type of information that is returned by this request is:
+```
+appInsId    Unique Id of the mobile edge app instance (string)
+ecgi  {     ("struct")
+  mmc       Mobile Country Code of the PLMN. For example, 240 for Sweden.
+  mnc       Mobile Network Code of the PLMN. For example, 02 for 3/Tre.
+  cellId    E-UTRAN Cell Global Identifier. Is this the id of the eNodeb perhaps?
+}
 ```
 
 ##### S1 Bearer Info
