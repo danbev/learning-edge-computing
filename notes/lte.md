@@ -84,7 +84,7 @@ Notice that our time is now 10ms one way and 20 ms for a round trip.
 UE      = User Equipment
 E-UTRAN = Evolved UMTS Terrestrial Radio Access Network
 EPC     = Evolved Packet Core
-UU      = Interface between UE and E-UTRAN
+Uu      = Interface between UE and E-UTRAN
 S1      = Interface between E-UTRAN and EPC 
 SGI     = 
 ```
@@ -125,3 +125,42 @@ Country Code          Mobile Network Code
 240=Sweden            02=3 (3/Tre is the name of my mobile Operator)
 ```
 
+### Radio Access Bearer (RAB)
+A bearer service is a link between two points, like a channel or pipe through
+which data can flow. These links have properties like Quality of Service (QoS),
+maximum deplay, packet loss limit
+```
++----+                       +---------+
+| UE |   Uu                  | E-UTRAN |
+|    |---------------------->|[eNodeB] |
+|    |                       |[eNodeB] |
++----+                       +---------+
+Uu = Interface between UE and E-UTRAN
+```
+So `Uu` is the interface and the link over this interface can have a bit rate
+and other properties. This is RAB. This is established by the E-UTRAN.
+* Maximum Bitrate (kb/s)
+* Guarantied Bitrate (kb/s)
+
+* Service Data Unit (SDU) error ratio
+* Maximum SDU size (bytes)
+* Transfer delay
+
+
+### Quality of Service Class Identifier (QCI)
+Quality of Service in LTE is class-based and QCI is the identifier of a number 
+or properties or QoS like Guaranteed Bitrate, Priority Handling, Packet Delay,
+Packet Error loss etc.
+```
+OCI   Priority
+QCI-1  2         Guaranteed Bit Rate (GBR)  Conversational Voice (Voice call)
+QCI-2  4         Guaranteed Bit Rate (GBR)  Converational Video (Video call)
+QCI-3  3         Guaranteed Bit Rate (GBR)  Real time gaming
+QCI-4  5         Guaranteed Bit Rate (GBR)  Buffered streaming (like youtube)
+
+QCI-5  1         Non-GBR                    IMS signaling
+QCI-6  6         Non-GBR                    TCP based applications, file transfer, chat
+QCI-7  7         Non-GBR                    Voice, Video streaming, interactive gaming
+QCI-8  8         Non-GBR                    File sharing, Priviledged subscribers like Police 
+QCI-9  9         Non-GBR                    File sharing, Non-Priviledged subscribers
+```
