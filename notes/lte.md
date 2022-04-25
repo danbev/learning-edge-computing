@@ -23,10 +23,10 @@ UTRAN = UMTS Terrestrial Radio Access Network
 CS    = Circuit Switched
 PS    = Packet Switched
 ```
-Circuit switched domain transports phone calls accross geographical regions that
-the operator covers. It communicated with the Public Switched Telephone
+The circuit switched domain transports phone calls accross geographical regions
+that the operator covers. It communicated with the Public Switched Telephone
 Network (PSTN) which allows mobile phones to make calls to land line, and with
-other operators CS domains. CS sets aside a dedicated bidirectional connection
+other operator's CS domains. CS sets aside a dedicated bidirectional connection
 for each individual phone call which provides a constant data rate and minimal
 delay. The connection has enough capacity to handle the case where both parties
 are talking at the same time which can be wasteful as that does not really
@@ -89,8 +89,39 @@ S1      = Interface between E-UTRAN and EPC
 SGI     = 
 ```
 
+### User Equipment
+Has a Mobile Termination (MT) which handles all the communication. I also has
+a Terminal Equipment (TE) which terminates the data stream. And ther is also
+a Universal Integrated Circuit Card (UICC) which is also known as a SIM card and
+this runs an application called Universal Subscriber Identity Module (USIM)
+which stores info about a users phonenumber, home network identity, security
+keys etc.
+
+### Evolved UMTS Teresstrial Radio Access Network
+Handles the radio communication between the mobile and the Evolved Packet Core
+(EPC). The components here are called evolved base stations, `eNodeB` or `eNB`
+and each of these control mobiles in one or more cells of the mobile network.
+The `eNodeB` that a mobile device is communicating with is called its serving
+eNB. eNodeB's can be connected to each other eNodeB's using an interface called
+X2. This can be used for signaling handover commands. 
+
+Each eNodeB connects to the EPC using an interface named S1
+
 
 ### Home Subscriber Server (HSS)
 Is a central database that contains information about the operators subscribers.
 
+### Public Land Mobile Network (PLMN)
+Is a network run a one operator in one country. A PLMN is identified by a
+globally unique PLMN code. This code consists of Mobile Country Code and a
+Mobile Network Code. It is a 5 or 6 digit number in the format: 000-00 or
+000-000
+For example, the following is the [PLMN](https://en.wikipedia.org/wiki/Mobile_network_codes_in_ITU_region_2xx_(Europe)#Sweden_%E2%80%93_SE)
+for my mobile operator:
+```
+  240-02
+
+Country Code          Mobile Network Code
+240=Sweden            02=3 (3/Tre is the name of my mobile Operator)
+```
 
