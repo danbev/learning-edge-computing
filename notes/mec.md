@@ -142,6 +142,33 @@ over a RESTful API or a message broker.
 ```
 GET {apiRoot}/rni/v1/quieries/rab_info
 ```
+The type of information that is returned by this request is:
+```
+timestamp   
+appInsId    Unique Id of the mobile edge app instance (string).
+requestId   Unique id assigned by the MEC application app for this RAB request.
+cellUserInfo { 0..N
+  ecgi  {     
+    mmc       Mobile Country Code of the PLMN. For example, 240 for Sweden.
+    mnc       Mobile Network Code of the PLMN. For example, 02 for 3/Tre.
+    cellId    E-UTRAN Cell Global Identifier. Is this the id of the eNodeb perhaps?
+  },
+  ueInfo {
+    associateId  ??
+    erabInfo {
+      erabId     Identifier for RAB.
+      erabQosParameters {
+        qci      Quality of Service Class Identifier.
+        qosInformation {
+          erabMbrDI   Max Down Link Bit rate
+          erabMbrUI   Max Up Link Bit rate
+          erabGbrDI   Guaranteed Down Link Bit rate
+          erabGbrUI   Guaranteed Up Link Bit rate
+        }
+      }
+    }
+}
+```
 
 ##### Public Land Mobile Network Info
 A PLMN is is a network run a one operator in one country.
@@ -152,7 +179,7 @@ GET {apiRoot}/rni/v1/quieries/plmn_info
 The type of information that is returned by this request is:
 ```
 appInsId    Unique Id of the mobile edge app instance (string)
-ecgi  {     ("struct")
+ecgi  {     
   mmc       Mobile Country Code of the PLMN. For example, 240 for Sweden.
   mnc       Mobile Network Code of the PLMN. For example, 02 for 3/Tre.
   cellId    E-UTRAN Cell Global Identifier. Is this the id of the eNodeb perhaps?
