@@ -139,7 +139,8 @@ Consumers of RNIS use the RNI API which supports both queries and subscriptions
 over a RESTful API or a message broker.
 ```
 POST {apiRoot}/rni/v1/subscriptions/{subscriptionType}
-Types:
+
+Subscription Types:
 cell_changed
 rab_est
 rab_mod
@@ -151,10 +152,6 @@ s1_bearer
 ```
 The body of the POST request will contain the data specified in section
 6.3 Data Model.
-
-Reponse: 201 Created
-Body: NotificationSubscription
-```
 
 To fully understand these values and properties in the messages it is helpful
 to learn a little about [LTE](./lte.md).
