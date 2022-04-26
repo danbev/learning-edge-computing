@@ -266,4 +266,34 @@ runtime). It is Huawei's upstream for their IoT platform.
 TODO:
 
 
+### MobileEdgeX
+Is a company that was founded by Germany's Deutsche Telecom in 2018.
 
+[Article](https://gulfsouthtowers.com/mobileedgexs-first-public-cloud-edge-network-is-live-with-deutsche-telekom/)  
+[Github](https://github.com/mobiledgex)  
+
+I can find a lot of search results for developers.mobiledgex.com, and
+mobiledgex.com but none of them can be reached.
+
+
+### AWS WaveLength
+"AWS Wavelength embeds AWS compute and storage services within 5G networks,
+providing mobile edge computing infrastructure for developing, deploying, and
+scaling ultra-low-latency applications."
+
+"application traffic from 5G devices reach application servers running in
+Wavelength Zones without leaving the telecommunications network. This avoids
+the latency that would result from application traffic traversing multiple hops
+across the internet to reach its destination, which allows customers to take
+full advantage of the latency and bandwidth benefits offered by modern 5G
+networks"
+
+Wavelength Zones are now generally available in partnership with Verizon in the
+United States, KDDI in Japan, SK Telecom in South Korea, and Vodafone in UK and
+Germany.
+
+[Developer Guide](https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html)
+
+I've not been able to find any information about developing applications that
+take advantage/use services of the Edge Host environment like the RNIS API or
+Location API.
