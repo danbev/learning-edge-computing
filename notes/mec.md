@@ -187,6 +187,22 @@ ecgi  {
 ```
 
 ##### S1 Bearer Info
+Recall that `S1` is the interface between `E-UTRAN` and the Evolved Packet Core:
+```
+
+ +--------------+        +-----------+         +---------+
+ | Mobile device|<------>|  E-UTRAN  |.........|  EPC    |
+ +--------------+  Uu    |           |---------|         |-----
+      (UE)               +-----------+   S1    |         |  SGi
+                                               +---------+
+
+UE      = User Equipment
+E-UTRAN = Evolved UMTS Terrestrial Radio Access Network
+EPC     = Evolved Packet Core
+Uu      = Interface between UE and E-UTRAN
+S1      = Interface between E-UTRAN and EPC 
+```
+
 ```
 GET {apiRoot}/rni/v1/quieries/s1_bearer_info
 ```
@@ -215,14 +231,16 @@ To fully understand these values and properties in the messages it is helpful
 to learn a little about [LTE](./lte.md).
 
 #### Location API
-Allows getting location information of specific UEs, all UEs accessed through
-the current MEC Host.
+Spec: [GS MEC 013 Location API](https://www.etsi.org/deliver/etsi_gs/MEC/001_099/013/02.02.01_60/gs_MEC013v020201p.pdf)
+
 
 #### Bandwitdh Management API
 TODO:
 
 #### UE Identity API
-Allows for UE specific traffic rules in the MEC system
+https://www.etsi.org/deliver/etsi_gs/MEC/001_099/013/02.02.01_60/gs_MEC013v020201p.pdf
+
+Allows for UE specific traffic rules in the MEC system.
 
 ### Application Package
 Is a bundle of files provided by application provider, on-boarded into mobile
@@ -232,15 +250,20 @@ a manifest file, and other optional files.
 
 #### K3S
 Provides the full power of Kubernetes but is more light weight but still around
-50MB binary, built for ARM.
+50MB binary, built for ARM. This is Rancher's/SuSE's kubernetes distribution
+which is equivalent to Red Hat's MicroShift, or Canonical's microK8s, or
+Mirantis's k0s.
 
 [K3S](https://k3s.io/)
 
 
 #### KubeEdge
 100% compatible with Kubernetes API, optimized for edge (components and
-runtime).
+runtime). It is Huawei's upstream for their IoT platform.
 
 [KubeEdge](https://kubeedge.io/en/)
 
 TODO:
+
+
+
