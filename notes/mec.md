@@ -293,6 +293,7 @@ United States, KDDI in Japan, SK Telecom in South Korea, and Vodafone in UK and
 Germany.
 
 [Developer Guide](https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html)
+[JavaScript SDK](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html)
 
 I've not been able to find any information about developing applications that
 take advantage/use services of the Edge Host environment like the RNIS API or
