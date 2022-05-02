@@ -267,13 +267,17 @@ TODO:
 
 
 ### MobileEdgeX
-Is a company that was founded by Germany's Deutsche Telecom in 2018.
+Is an Edge Computing company that was founded by Germany's Deutsche Telecom in
+2018.
 
 [Article](https://gulfsouthtowers.com/mobileedgexs-first-public-cloud-edge-network-is-live-with-deutsche-telekom/)  
 [Github](https://github.com/mobiledgex)  
 
 I can find a lot of search results for developers.mobiledgex.com, and
-mobiledgex.com but none of them can be reached.
+http://www.mobiledgex.com/ but none of them can be reached.
+
+I've not been able to find out if they provide any APIs for accessing MEC Host
+services like RNIS.
 
 
 ### AWS WaveLength
@@ -298,3 +302,4 @@ Germany.
 I've not been able to find any information about developing applications that
 take advantage/use services of the Edge Host environment like the RNIS API or
 Location API.
+
