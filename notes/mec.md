@@ -266,18 +266,18 @@ runtime). It is Huawei's upstream for their IoT platform.
 TODO:
 
 
-### MobileEdgeX
+### MobilEdgeX
 Is an Edge Computing company that was founded by Germany's Deutsche Telecom in
-2018.
+2018. They were [aquired](https://www.lightreading.com/the-edge/google-cloud-acquires-mobiledgex-will-make-it-open-source/d/d-id/777163)
+by Google in April 2022 and their offerings are to be open sourced.
 
 [Article](https://gulfsouthtowers.com/mobileedgexs-first-public-cloud-edge-network-is-live-with-deutsche-telekom/)  
 [Github](https://github.com/mobiledgex)  
 
-I can find a lot of search results for developers.mobiledgex.com, and
-http://www.mobiledgex.com/ but none of them can be reached.
-
-I've not been able to find out if they provide any APIs for accessing MEC Host
-services like RNIS.
+TODO: Take a closer look at this and see if the offer any MEC APIs. For a while
+I was not able to find any information about them but his might have been because
+of the aquisition by Google (like I was not able to access there site at all to
+read their documentation).
 
 
 ### AWS WaveLength
