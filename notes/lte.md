@@ -164,3 +164,12 @@ QCI-7  7         Non-GBR                    Voice, Video streaming, interactive 
 QCI-8  8         Non-GBR                    File sharing, Priviledged subscribers like Police 
 QCI-9  9         Non-GBR                    File sharing, Non-Priviledged subscribers
 ```
+
+### Allocation and Retention Priority (ARP)
+Is one of two QoS tags used in packets:
+```
++-----+------+------+------------+------+
+|ARP=j| QCI#k|To UE | Service ID | Data |
++-----+------+------+-------------------+
+```
+
