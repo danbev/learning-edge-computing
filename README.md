@@ -3,7 +3,7 @@ Projects to gather notes and examples around edge computing.
 
 ### Edge computing background
 Over the recent years more and more IoT devices have been deployed and these
-devices are creating more an more data that we want to use in some way. What is
+devices are creating more and more data that we want to use in some way. What is
 currently most often the case is that these IoT devices are connected to
 some sort of gateway what will route the data to a cloud service for processing
 (analysis, processing, storing etc.).
@@ -43,8 +43,8 @@ more and more data is going be transmitted to the cloud services which is going
 to cause bandwidth issues.
 
 There is also an issue with latency for some types of applications, for example
-a self-driving car might be able to wait for a packet to be transported to/from
-a cloud service.
+a self-driving car might not be able to wait for a packet to be transported
+to/from a cloud service.
 There is also the issue with that an application might not allow for disconnect
 to the cloud service. Again a self-driving car must be able to continue if such
 an break occurs.
@@ -65,11 +65,11 @@ Edge computing:
    |IoT Device|<-+                                        |                   |
    +----------+                                           +-------------------+
 ```
-An edge server is compute resource located where, or close to where,
+An edge server is a compute resource located where, or close to where,
 data is being generated. So it receives data from IoT devices like sensors and
-can store, process, or send the data to the cloud (or all three I guess). But
-data does not need to be sent to the cloud and might be processed by the edge
-compute resources itself.
+can store, process, and/or send the data to the cloud (or all three I guess).
+But data does not need to be sent to the cloud and might be processed by the
+edge compute resources itself.
 
 I initialy thought of the edge compute resources as a normal server in a rack
 for example, but these can be small dedicated devices (small single board
