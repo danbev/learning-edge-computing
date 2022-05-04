@@ -7,6 +7,8 @@ Notes:
 * [RAN](./notes/ran.md)
 * [CoAP](./notes/coap.md)
 * [Zenoh](./notes/zenoh.md)
+* [OPC UA](./notes/opcua.md)
+* [MQTT](./notes/mqtt.md)
 
 ### Edge computing background
 Over the recent years more and more IoT devices have been deployed and these
