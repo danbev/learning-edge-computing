@@ -87,7 +87,7 @@ or somewhere in Sweden (I think Netflix does this for example). I imagine that
 doing this would be like deploying in a kubernetes like environment, at
 least it would be a non-resource contrained environment where a full operating
 system and memory resources are available. The runtime used in this case could
-be any runtime like Java, JavaScript, DotNet etc.
+be any runtime for Java, JavaScript (Node.js, Deno), DotNet etc.
 
 Now, lets say I switch to my mobile phone and start using the application on it.
 This would now be using my telco operator and going over their network. Placing
@@ -98,14 +98,15 @@ network devices to virtualized software that can be run on commondity hardware
 and managed in much the same way as cloud environment using platforms like
 kubernetes. So in this case we have access to similar non-resources constrained
 environment where I expect the runetime to be the same as the previous example,
-that is any runtime like Java, JavScript, DotNet, etc.
+that is any runtime for Java, JavaScript (Node.js, Deno), DotNet, etc.
 
 But there are also other types of Edges which could be on factory floors, or
 located in hospitals, or spread out accross a city, or in cars, where smaller
 devices containing edge compute resources need to be placed closer to where data 
 is generated and can be acted upon in the shortest time possible. These can also
 act as aggragators and limit the amount of data being sent to backend cloud
-applications.
+applications. So what options are there for deploying to these resource
+constrained environments? I currently don't know the answer to this question.
 
 
 I initialy thought of the edge compute resources as a normal server in a rack
