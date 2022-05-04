@@ -82,14 +82,15 @@ But data does not need to be sent to the cloud and might be processed by the
 edge compute resources itself.
 
 Now, the environment where these compute resources are located will look very
-different. For example, ~ets say that I'm at home watching IP based TV
+different. For example, lets say that I'm at home watching IP based TV
 or using an application on a WIFI connected device. To move an application
-closer to my location would be placing/deploying it perhaps in my ISP network
-or somewhere in Sweden (I think Netflix does this for example). I imagine that
-doing this would be like deploying in a kubernetes like environment, at
-least it would be a non-resource contrained environment where a full operating
-system and memory resources are available. The runtime used in this case could
-be any runtime for Java, JavaScript (Node.js, Deno), DotNet etc.
+closer to my location would be placing/deploying it perhaps in my internet
+service provider's (ISP) network or somewhere in Sweden (I think Netflix does
+this for example). I imagine that doing this would be like deploying in a
+kubernetes like environment, at least it would be a non-resource contrained
+environment where a full operating system and memory resources are available.
+The runtime used in this case could be any runtime for Java, JavaScript
+(Node.js, Deno), DotNet etc:
 
 ```                 
                                                           +-------------------+
@@ -136,8 +137,9 @@ act as aggragators and limit the amount of data being sent to backend cloud
 applications. 
 
 ```                 
-                Public Environment                        +-------------------+
-                Embedded in products                      |                   |
+                Public environments                       +-------------------+
+                Factory environments                      |                   |
+                Embedded in products (cars and others)    |                   |
                                                           |                   |
                      +--------+                           |                   |
    +----------+      |Edge    |                           |   Cloud Services  |
@@ -198,6 +200,9 @@ Networking: TCP/UDP IP, Http/ CoAP, XMPP/MQTT/AMQP, 802.15.4 (ZigBee), Z-Wave, B
 Control: Deployment, Actuation, Mediation, Security
 Storage: Caching
 ```
+
+## Multi-access Edge Computing (MEC)
+See [MEC](./notes/mec.md).
 
 ### Usecases 
 
