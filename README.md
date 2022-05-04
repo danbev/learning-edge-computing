@@ -1,6 +1,13 @@
 ## Learning Edge Computing
 Projects to gather notes and examples around edge computing.
 
+Notes:
+* [MEC](./notes/mec.md)
+* [LTE](./notes/lte.md)
+* [RAN](./notes/ran.md)
+* [CoAP](./notes/coap.md)
+* [Zenoh](./notes/zenoh.md)
+
 ### Edge computing background
 Over the recent years more and more IoT devices have been deployed and these
 devices are creating more and more data that we want to use in some way. What is
