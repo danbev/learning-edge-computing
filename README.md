@@ -119,3 +119,70 @@ Control: Deployment, Actuation, Mediation, Security
 Storage: Caching
 ```
 
+### Usecases 
+
+* Autonomous vehicles
+These will generate huge amounts of data and need to repond in real time. This
+will require them to have onboard computing resources that can handle this and
+will have Edge compute resources onboard. These will b
+
+* Cloud Gaming
+Cloud gaming companies are looking to build edge servers as close to gamers as
+possible in order to reduce latency and provide a fully responsive and immersive
+gaming experience. 
+
+* Health Care
+Healthcare data is coming from numerous medical devices, including those in
+doctor's offices, in hospitals and from consumer wearables bought by patients
+themselves. But all that data doesn't need to be moved to centralized servers
+for analysis and storage -- a process that could create bandwidth congestion
+and an explosion in storage needs.
+
+In this case artificial intelligence (AI) and machine learning capable edge
+compute resources might be needed to deployed at the Edge (somewhere at the
+hospital, I imaging this as network connected devices that are small and not
+large servers). These would help medical staff make decisions in real time
+and minimize the number of false alarms.
+
+* Industrial IoT
+There a a lot of sensors and IoT devices in instustrial environments and
+having edge compute resources closer to where this data is used provides low
+latency to that immediate reponses to problems are possible. And Edge compute
+resources with AI/MI can help improve quality assurance.
+
+* Security 
+Surveillance systems can benefit from the low latency and reliability of edge
+computing because it’s often necessary to respond to security threats within
+seconds. Edge computing also significantly reduces bandwidth costs in video
+surveillance, since the vast majority of surveillance footage requires no
+response. 
+
+
+### Edge Runtimes
+Moving applications closer to the Edge of the network could mean different
+things for different use cases. Lets say that I'm at home watching IP based TV
+or using an application on a WIFI connected device. To move an application
+closer to my location would be placing/deploying it perhaps in my ISP network
+or somewhere in Sweden (I think Netflix does this for example). I imagine that
+doing this would be like deploying in/on a kubernetes like environment, at
+least it would be a non resources contrained environment where a full operating
+system and memory resources are available. The runtime used in this case could
+be any runtime like Java, JavaScript, DotNet etc.
+
+Now, lets say I switch to my mobile phone and start using the application on it.
+This would now be using my telco operator and going over their network. Placing
+the same application closer would in this case be placing it in the telco
+operators environment (like the base station). This environment is similar to
+a cloud operator environment now where they have moved from hardware specific
+network devices to virtualized software that can be run on commondity hardware
+and managed in much the same way as cloud environment using platforms like
+kubernetes.
+
+There are also other types of Edges which could be on factory floors, or located
+in hospitals, or spread out accross a city, or in cars, where smaller devices
+contain edge compute resources to be placed closer to where data is generated
+and can be acted upon in the shortest time possible. These can also act as
+aggragators and limit the amount of data being sent to backend cloud
+applications.
+
+
